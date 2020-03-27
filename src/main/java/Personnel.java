@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * @author Win10
  *
  */
-public final class Personnel {
+public final class Personnel extends Interface_annuaire {
 	
 	private final String nom;
 	

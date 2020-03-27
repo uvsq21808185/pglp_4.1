@@ -1,5 +1,6 @@
 import java.awt.List;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * 
@@ -9,23 +10,33 @@ import java.util.ArrayList;
  * @author Win10
  *
  */
-public class CompositePersonnel implements Annuaire {
+public class CompositePersonnel extends Interface_annuaire {
 	
 	private String nomAnnuaire;
-    private ArrayList<Personnel> listPersonnels = new ArrayList<Personnel>();
+    private ArrayList<Interface_annuaire> listPersonnels = new ArrayList<Interface_annuaire>();
 
-    public void print() 
+    public void tostring() 
     {
-        // TODO Auto-generated method stub
         System.out.println("Annuaire de "+nomAnnuaire);
+        for (Interface_annuaire ip : listPersonnels) {
+			ip.tostring();
     }
-
+    }
+    //
+   // public Interface_annuaire pollFirst(ArrayList<Interface_annuaire> listPersonnels) {
+    //	Interface_annuaire c = listPersonnels[0];
+    //}
+//
     public CompositePersonnel(String nom)
     {
         this.nomAnnuaire = nom;
     }
+    public CompositePersonnel(){
+    	
+    }
+   
 
-    public void addPersonnel(Personnel personnel)
+    public void addPersonnel(Interface_annuaire personnel)
     {
         listPersonnels.add(personnel);
     }
@@ -34,5 +45,14 @@ public class CompositePersonnel implements Annuaire {
     {
         listPersonnels.remove(personnel);
     }
+    
+    public Iterator<Interface_annuaire> iterator() {
+		return listPersonnels.iterator();
+	}
+    public final String getNomAnnuaire() {
+    	return nomAnnuaire;
+    
+    }
+
 
 }
