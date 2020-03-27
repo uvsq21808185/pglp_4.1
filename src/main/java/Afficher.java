@@ -4,11 +4,10 @@ import java.util.Iterator;
 public class Afficher implements Iterable<Interface_annuaire>  {
 
 	
-	private ArrayList<Interface_annuaire> c
-	= new ArrayList<Interface_annuaire>();
+	private ArrayList<Interface_annuaire> c = new ArrayList<Interface_annuaire>();
 	/**
 	 * retourne un itérateur sur la liste généré par le parcours.
-	 * @return itérateur sur la liste rempli par le parcours
+	 * @return itérateur sur la liste
 	 */
 	public Iterator<Interface_annuaire> iterator() {
 		return c.iterator();
