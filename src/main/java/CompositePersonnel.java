@@ -1,4 +1,3 @@
-import java.awt.List;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -6,7 +5,7 @@ import java.util.Iterator;
  * 
  */
 
-/** Classe CompositePersonnel qui hérite de la classe Abstraire Interface_annuaire
+/** Classe CompositePersonnel qui hï¿½rite de la classe Abstraire Interface_annuaire
  * @author Win10
  *
  */
@@ -22,34 +21,30 @@ public class CompositePersonnel extends Interface_annuaire {
 			ip.tostring();
     }
     }
-    //
-   // public Interface_annuaire pollFirst(ArrayList<Interface_annuaire> listPersonnels) {
-    //	Interface_annuaire c = listPersonnels[0];
-    //}
-//
+   
     /* 
-     * Constructeur qui prend une chaine de caractère en entrée 
+     * Constructeur qui prend une chaine de caractï¿½re en entrï¿½e 
      */
     public CompositePersonnel(String nom)
     {
         this.nomAnnuaire = nom;
     }
     /* 
-     * Constructeur par défault 
+     * Constructeur par dï¿½fault 
      */
     public CompositePersonnel(){
     	
     }
    
     /* 
-     * Méthode pour ajouter des personnels dans la liste 
+     * Mï¿½thode pour ajouter des personnels dans la liste 
      */
     public void addPersonnel(Interface_annuaire personnel)
     {
         listPersonnels.add(personnel);
     }
     /* 
-     * Méthode pourcsupprimer des personnels de la liste 
+     * Mï¿½thode pourcsupprimer des personnels de la liste 
      */
 
     public void removePersonnel(Personnel personnel)
@@ -57,13 +52,13 @@ public class CompositePersonnel extends Interface_annuaire {
         listPersonnels.remove(personnel);
     }
     /* 
-     * Cette méthode renvoie un itérateur sur ListPersonnels
+     * Cette mï¿½thode renvoie un itï¿½rateur sur ListPersonnels
      */
     public Iterator<Interface_annuaire> iterator() {
 		return listPersonnels.iterator();
 	}
     /* 
-     * Cette méthode renvoie le nom de l'annuaire
+     * Cette mï¿½thode renvoie le nom de l'annuaire
      */
     public final String getNomAnnuaire() {
     	return nomAnnuaire;
