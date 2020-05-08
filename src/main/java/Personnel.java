@@ -1,26 +1,29 @@
 import java.util.ArrayList;
-
-/**
+/** Classe Personnel qui implï¿½mente la classe abstraire Interface_annuaire
  * 
- */
-
-/** Classe Personnel qui implémente la classe abstraire Interface_annuaire
- * @author Win10
- *
+ * @author ZAOUAM Sirageddine
+ * @version 2.0
  */
 public final class Personnel extends Interface_annuaire {
-	
+	/*
+	 * Le nom du personnel.
+	 */
 	private final String nom;
-	
+	/*
+	 * Le prÃ©nom du perosnnel.
+	 */
 	private final String prenom;
-	
+	/*
+	 * La liste de numÃ©ros de tÃ©lephone du personnel.
+	 */
 	private final ArrayList<String> tel;
-	
+	/*
+	 * La date de naissance.
+	 */
 	private final java.time.LocalDate Date;
-	
 	 /* 
      * Constructeur de la classe Personnel 
-     * @param builder pour créer le personnel
+     * @param builder pour crÃ©er le personnel
      */
 	private Personnel(Personnel_Builder builder)
 	{
@@ -28,17 +31,15 @@ public final class Personnel extends Interface_annuaire {
 		this.prenom=builder.prenom;
 		this.tel= builder.tel;
 		this.Date= builder.date;
-		
-	
 	}
 	 /* 
-     * Cette méthode affiche le personnel : son nom, son prenom , sa date de naissance
-     * et son numéro de télephone sous forme d'une chaine de caractères
+     * Cette mÃ©thode affiche le personnel : son nom, son prenom , sa date de naissance
+     * et son numÃ©ro de tÃ©lephone sous forme d'une chaine de caractÃ¨res.
      */
 	public void tostring() {
 		
 		System.out.println("****************");
-		System.out.print(prenom + " " + nom + ", Née le : " + Date + ", numéro de téléphone : ");
+		System.out.print(prenom + " " + nom + ", NÃ©Ã© le : " + Date + ", numÃ©ro de telÃ©phone : ");
 		for (String i : tel) {
 			System.out.print(i + "  ");
 		}
@@ -46,8 +47,9 @@ public final class Personnel extends Interface_annuaire {
 
 		System.out.println("****************");
 	}
+	
 	 /* 
-     * La classe Personnel_Builder pour créer un personnel
+     * La classe Personnel_Builder pour crÃ©er un personnel
      */
 	
 	public static class Personnel_Builder {
@@ -75,13 +77,15 @@ public final class Personnel extends Interface_annuaire {
 		}
 	}
 	 /* 
-     * Cette méthode renvoie le nom d'un personnel
+     * Cette mÃ©thode renvoie le nom d'un personnel
+     * @return le nomn du personnel
      */
 	public String getNom() {
 		return nom;
 	}
 	 /* 
-     * Cette méthode renvoie le prenom d'un personnel
+     * Cette mÃ©thode renvoie le prenom d'un personnel
+     * @return le prenom du personnel
      */
 	public String getPrenom() {
 		return prenom;

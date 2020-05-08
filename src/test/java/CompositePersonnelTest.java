@@ -1,4 +1,4 @@
-/*import static org.junit.Assert.*;
+import static org.junit.Assert.*;
 
 import java.util.Iterator;
 
@@ -20,4 +20,3 @@ public class CompositePersonnelTest {
 	}
 
 }
-*/

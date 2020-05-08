@@ -1,13 +1,26 @@
 import java.util.ArrayList;
 import java.util.Iterator;
-
+/*
+ * Classe Afficher qui implÃ©mente la mÃ©thode print pour afficher le parcours
+ * en largeur.
+ * 
+ * @author ZAOUAM SIrgaeddine
+ * @version 2.0
+ */
 public class Afficher implements Iterable<Interface_annuaire>  {
-
-	
+	/*
+	 * Une liste de personnel
+	 */
 	private ArrayList<Interface_annuaire> c = new ArrayList<Interface_annuaire>();
+	/*
+	 * Constructeur de la classe
+	 */
+	public Afficher(ArrayList<Interface_annuaire> liste) {
+		this.c=liste;
+	}
 	/**
-	 * retourne un itérateur sur la liste généré par le parcours.
-	 * @return itérateur sur la liste
+	 * retourne un itÃ©rateur sur la liste gÃ©nÃ©rÃ© par le parcours.
+	 * @return itÃ©rateur sur la liste
 	 */
 	public Iterator<Interface_annuaire> iterator() {
 		return c.iterator();
